@@ -90,4 +90,14 @@ export default class NumToWord{
 		//console.log(this.w);
 		return this.w;
 	}
+	convert1(){
+		var num=this.str;
+		var card=['zero','one','two','three','four','five','six','seven','eight','nine'];
+		var i;
+		this.w='';
+		for(i=0;i<num.length;i++){
+			this.w+=card[num[i]]+' ';
+		}
+		return this.w;
+	}
 }

@@ -53,4 +53,9 @@ export default class Ordinal{
         const obj3=new ReplaceN(this.ref,this.formedstr,this.str);
         obj3.compute();
     }
+    output(){
+        const obj1=new NumToWord(this.storeUnit);
+        this.formedstr+=obj1.convert()+this.storeOrd;
+        return this.formedstr;
+    }
 }

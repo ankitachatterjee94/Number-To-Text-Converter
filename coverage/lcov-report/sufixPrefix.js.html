@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for cardinal.js</title>
+    <title>Code coverage report for sufixPrefix.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="index.html">All files</a> cardinal.js
+      <a href="index.html">All files</a> sufixPrefix.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">95.45% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>21/22</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">95.45% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>21/22</span>
       </div>
     </div>
   </div>
@@ -64,12 +64,44 @@
 19
 20
 21
-22</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -78,33 +110,40 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//send cardinal numbers to numToWord
-&nbsp;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//segreegating number, prefix and sufix from a string with prefix and sufix
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
-export default class Cardinal{
+export default class SufixPrefix{
     constructor(ref,str){
         this.str=str;
-        this.answer='';
+        this.sufix='';
+        this.prefix='';
+        this.num='';
+        this.formedstr='';
         this.ref=ref;
     }
-    send(){
-        const obj=new NumToWord(this.str);
-        this.answer=obj.convert();
-        const obj1=new ReplaceN(this.ref,this.answer,this.str);
-        obj1.compute();
+    extract(){
+        var i=0,j;
+        while(!this.str.charAt(i).match(/\d/)){
+<span class="cstat-no" title="statement not covered" >            i++;</span>
+        }
+        this.prefix=this.str.substring(0,i);
+        j=i;
+        while(this.str.charAt(i).match(/\d/)){
+            i++;
+        }
+        this.num=this.str.substring(j,i);
+        this.sufix=this.str.substring(i);
+        const obj=new NumToWord(this.num);
+        this.formedstr=this.prefix+obj.convert()+this.sufix;
+        const obj3=new ReplaceN(this.ref,this.formedstr,this.str);
+        obj3.compute();
     }
     output(){
-        const obj=new NumToWord(this.str);
-        this.answer=obj.convert();
-        return this.answer;
+        const obj=new NumToWord(this.num);
+        this.formedstr=this.prefix+obj.convert()+this.sufix;
+        return this.formedstr;
     }
 }</pre></td></tr>
 </table></pre>

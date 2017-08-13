@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for cardinal.js</title>
+    <title>Code coverage report for phoneNo.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="index.html">All files</a> cardinal.js
+      <a href="index.html">All files</a> phoneNo.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>21/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>21/21</span>
       </div>
     </div>
   </div>
@@ -64,8 +64,18 @@
 19
 20
 21
-22</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -73,38 +83,61 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//send cardinal numbers to numToWord
-&nbsp;
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//extracting the number part from a phone no
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
-export default class Cardinal{
+export default class PhoneNo{
     constructor(ref,str){
         this.str=str;
-        this.answer='';
+        this.storeCode='';
+        this.storeNo='';
+        this.formedstr='';
         this.ref=ref;
     }
-    send(){
-        const obj=new NumToWord(this.str);
-        this.answer=obj.convert();
-        const obj1=new ReplaceN(this.ref,this.answer,this.str);
-        obj1.compute();
+    extract(){
+        var i=1;
+        while(this.str.charAt(i)!='-'){
+            i++;
+        }
+        this.storeCode=this.str.substring(1,i);
+        this.storeNo=this.str.substring(i+1);
+        const obj1=new NumToWord(this.storeCode);
+        this.formedstr='+'+obj1.convert1()+'-';
+        const obj2=new NumToWord(this.storeNo);
+        this.formedstr+=obj2.convert1();
+        const obj=new ReplaceN(this.ref,this.formedstr,this.str);
+        obj.compute();
     }
     output(){
-        const obj=new NumToWord(this.str);
-        this.answer=obj.convert();
-        return this.answer;
+        const obj1=new NumToWord(this.storeCode);
+        this.formedstr='+'+obj1.convert1()+'-';
+        const obj2=new NumToWord(this.storeNo);
+        this.formedstr+=obj2.convert1();
+        return this.formedstr;
     }
 }</pre></td></tr>
 </table></pre>

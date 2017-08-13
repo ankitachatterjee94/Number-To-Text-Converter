@@ -1,25 +1,25 @@
-import Decimal from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/decimal.js';
+import Ordinal from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/ordinal.js';
 import NumToWord from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/numToWord.js';
 import ReplaceN from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/replace.js';
-const obj=new Decimal('','2.5');
-const obj1=new NumToWord(obj,'2.5');
-const obj2=new ReplaceN(obj,'two-five');
+const obj=new Ordinal('','24th');
+const obj1=new NumToWord(obj,'24th');
+const obj2=new ReplaceN(obj,'twenty fourth');
 
 
-describe("testing decimal",function(){
+describe("testing ordinal",function(){
 
     it("testing",function(){
         //expect(obj.extract()).toBe(undefined);
-        obj.storeWholeNum='2';
-        obj.storeFracNum='5';
-        expect(obj.output()).toBe('two.five');
+        obj.storeUnit='24';
+        obj.storeOrd='th';
+        expect(obj.output()).toBe('twenty fourth');
     });
     it("testing",function(){
         //expect(obj.extract()).toBe(undefined);
         //expect(obj.arrayForm()).toBe(undefined);
         obj2.ref='obj2';
-        obj2.formedstr='two.five';
-        obj2.str='2.5';
+        obj2.formedstr='twenty fourth';
+        obj2.str='24th';
         expect(obj.extract()).toBe(undefined);
     });
 });

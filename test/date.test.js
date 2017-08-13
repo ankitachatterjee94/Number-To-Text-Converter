@@ -9,7 +9,8 @@ const obj2=new ReplaceN(obj,'twenty five-eight-one thousand nine hundred ninety 
 describe('Date',function(){
     it('should check date',function(){
 
-        expect(obj.arrayForm()).toBe(undefined);
+        //expect(obj.arrayForm()).toBe(undefined);
+        //expect(obj.extract()).toBe(undefined);
         obj.year='1994';
         obj.month='08';
         obj.day='25';

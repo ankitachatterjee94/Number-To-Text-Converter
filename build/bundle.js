@@ -178,6 +178,18 @@ var NumToWord = function () {
 			//console.log(this.w);
 			return this.w;
 		}
+	}, {
+		key: 'convert1',
+		value: function convert1() {
+			var num = this.str;
+			var card = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+			var i;
+			this.w = '';
+			for (i = 0; i < num.length; i++) {
+				this.w += card[num[i]] + ' ';
+			}
+			return this.w;
+		}
 	}]);
 
 	return NumToWord;
@@ -836,11 +848,20 @@ var PhoneNo = function () {
             this.storeCode = this.str.substring(1, i);
             this.storeNo = this.str.substring(i + 1);
             var obj1 = new _numToWord2.default(this.storeCode);
-            this.formedstr = '+' + obj1.convert() + '-';
+            this.formedstr = '+' + obj1.convert1() + '-';
             var obj2 = new _numToWord2.default(this.storeNo);
-            this.formedstr += obj2.convert();
+            this.formedstr += obj2.convert1();
             var obj = new _replace2.default(this.ref, this.formedstr, this.str);
             obj.compute();
+        }
+    }, {
+        key: 'output',
+        value: function output() {
+            var obj1 = new _numToWord2.default(this.storeCode);
+            this.formedstr = '+' + obj1.convert1() + '-';
+            var obj2 = new _numToWord2.default(this.storeNo);
+            this.formedstr += obj2.convert1();
+            return this.formedstr;
         }
     }]);
 
@@ -1133,6 +1154,13 @@ var Ordinal = function () {
             }
             var obj3 = new _replace2.default(this.ref, this.formedstr, this.str);
             obj3.compute();
+        }
+    }, {
+        key: 'output',
+        value: function output() {
+            var obj1 = new _numToWord2.default(this.storeUnit);
+            this.formedstr += obj1.convert() + this.storeOrd;
+            return this.formedstr;
         }
     }]);
 

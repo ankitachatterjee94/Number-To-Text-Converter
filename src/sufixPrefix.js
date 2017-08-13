@@ -27,4 +27,9 @@ export default class SufixPrefix{
         const obj3=new ReplaceN(this.ref,this.formedstr,this.str);
         obj3.compute();
     }
+    output(){
+        const obj=new NumToWord(this.num);
+        this.formedstr=this.prefix+obj.convert()+this.sufix;
+        return this.formedstr;
+    }
 }

@@ -9,6 +9,8 @@ const obj2=new ReplaceN(obj,'two:five:four');
 describe("testing time",function(){
 
     it("testing",function(){
+        //expect(obj.extract()).toBe(undefined);
+        //expect(obj.arrayForm()).toBe(undefined);
         obj.hr='2';
         obj.min='05';
         obj.sec='04';

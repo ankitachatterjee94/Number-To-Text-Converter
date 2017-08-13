@@ -17,10 +17,17 @@ export default class PhoneNo{
         this.storeCode=this.str.substring(1,i);
         this.storeNo=this.str.substring(i+1);
         const obj1=new NumToWord(this.storeCode);
-        this.formedstr='+'+obj1.convert()+'-';
+        this.formedstr='+'+obj1.convert1()+'-';
         const obj2=new NumToWord(this.storeNo);
-        this.formedstr+=obj2.convert();
+        this.formedstr+=obj2.convert1();
         const obj=new ReplaceN(this.ref,this.formedstr,this.str);
         obj.compute();
+    }
+    output(){
+        const obj1=new NumToWord(this.storeCode);
+        this.formedstr='+'+obj1.convert1()+'-';
+        const obj2=new NumToWord(this.storeNo);
+        this.formedstr+=obj2.convert1();
+        return this.formedstr;
     }
 }
