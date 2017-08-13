@@ -6,6 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/babel-node ./src/text.js",
     "build": "webpack --config ./webpack.conf.js ",
+    "doc": "./node_modules/.bin/jsdoc ./src/*.js",
     "test": "./node_modules/.bin/eslint ./src/*.js && jest --coverage"
   },
   "repository": {

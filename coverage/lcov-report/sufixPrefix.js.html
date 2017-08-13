@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">95.45% </span>
+        <span class="strong">40.91% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>21/22</span>
+        <span class='fraction'>9/22</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">95.45% </span>
+        <span class="strong">40.91% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>21/22</span>
+        <span class='fraction'>9/22</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -77,11 +77,29 @@
 32
 33
 34
-35</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -90,21 +108,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -112,6 +130,15 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//segreegating number, prefix and sufix from a string with prefix and sufix
+&nbsp;
+/**class that segregates prefix sufix and number
+ * this.str			:	stores the string
+ * this.sufix		:	stores the sufix
+ * this.prefix		:	stores the prefix
+ * this.num			:	stores the number
+ * this.formedstr	:	stores the converted string
+ * this.ref			:	stores the reference to the identifier
+ */
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
 export default class SufixPrefix{
@@ -123,22 +150,22 @@ export default class SufixPrefix{
 		this.formedstr='';
 		this.ref=ref;
 	}
-	extract(){
-		var i=0,j;
-		while(!this.str.charAt(i).match(/\d/)){
+<span class="fstat-no" title="function not covered" >	ex</span>tract(){
+		var i=<span class="cstat-no" title="statement not covered" >0,</span>j;
+<span class="cstat-no" title="statement not covered" >		while(!this.str.charAt(i).match(/\d/)){</span>
 <span class="cstat-no" title="statement not covered" >			i++;</span>
 		}
-		this.prefix=this.str.substring(0,i);
-		j=i;
-		while(this.str.charAt(i).match(/\d/)){
-			i++;
+<span class="cstat-no" title="statement not covered" >		this.prefix=this.str.substring(0,i);</span>
+<span class="cstat-no" title="statement not covered" >		j=i;</span>
+<span class="cstat-no" title="statement not covered" >		while(this.str.charAt(i).match(/\d/)){</span>
+<span class="cstat-no" title="statement not covered" >			i++;</span>
 		}
-		this.num=this.str.substring(j,i);
-		this.sufix=this.str.substring(i);
-		const obj=new NumToWord(this.num);
-		this.formedstr=this.prefix+obj.convert()+this.sufix;
-		const obj3=new ReplaceN(this.ref,this.formedstr,this.str);
-		obj3.compute();
+<span class="cstat-no" title="statement not covered" >		this.num=this.str.substring(j,i);</span>
+<span class="cstat-no" title="statement not covered" >		this.sufix=this.str.substring(i);</span>
+		const obj=<span class="cstat-no" title="statement not covered" >new NumToWord(this.num);</span>
+<span class="cstat-no" title="statement not covered" >		this.formedstr=this.prefix+obj.convert()+this.sufix;</span>
+		const obj3=<span class="cstat-no" title="statement not covered" >new ReplaceN(this.ref,this.formedstr,this.str);</span>
+<span class="cstat-no" title="statement not covered" >		obj3.compute();</span>
 	}
 	output(){
 		const obj=new NumToWord(this.num);
@@ -151,7 +178,7 @@ export default class SufixPrefix{
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 21:22:01 GMT+0530 (IST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 23:01:27 GMT+0530 (IST)
 </div>
 </div>
 <script src="prettify.js"></script>

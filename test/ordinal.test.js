@@ -14,12 +14,12 @@ describe("testing ordinal",function(){
         obj.storeOrd='th';
         expect(obj.output()).toBe('twenty fourth');
     });
-    it("testing",function(){
+    /*it("testing",function(){
         //expect(obj.extract()).toBe(undefined);
         //expect(obj.arrayForm()).toBe(undefined);
         obj2.ref='obj2';
         obj2.formedstr='twenty fourth';
         obj2.str='24th';
         expect(obj.extract()).toBe(undefined);
-    });
+    });*/
 });

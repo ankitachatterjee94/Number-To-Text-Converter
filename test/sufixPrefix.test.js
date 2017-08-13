@@ -16,12 +16,12 @@ describe("testing sufixprefix",function(){
         obj.sufix='kg';
         expect(obj.output()).toBe('twokg');
     });
-    it("testing",function(){
+    /*it("testing",function(){
         //expect(obj.extract()).toBe(undefined);
         //expect(obj.arrayForm()).toBe(undefined);
         obj2.ref='obj2';
         obj2.formedstr='twokg';
         obj2.str='2kg';
         expect(obj.extract()).toBe(undefined);
-    });
+    });*/
 });

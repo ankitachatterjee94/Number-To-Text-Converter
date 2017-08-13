@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">47.62% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>21/21</span>
+        <span class='fraction'>10/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">47.62% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>21/21</span>
+        <span class='fraction'>10/21</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -75,7 +75,23 @@
 30
 31
 32
-33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+33
+34
+35
+36
+37
+38
+39
+40
+41</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -87,18 +103,18 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -108,6 +124,14 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//extracting the number part from a phone no
+&nbsp;
+/**class that segregates special character, cardinal and prefix and postfix
+ * this.str			:	stores the string
+ * this.storeCode	:	stores the state code
+ * this.storeNo		:	stores the number
+ * this.formedstr	:	stores the converted string
+ * this.ref			:	stores the reference to the identifier
+ */
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
 export default class PhoneNo{
@@ -118,19 +142,19 @@ export default class PhoneNo{
 		this.formedstr='';
 		this.ref=ref;
 	}
-	extract(){
-		var i=1;
-		while(this.str.charAt(i)!='-'){
-			i++;
+<span class="fstat-no" title="function not covered" >	ex</span>tract(){
+		var i=<span class="cstat-no" title="statement not covered" >1;</span>
+<span class="cstat-no" title="statement not covered" >		while(this.str.charAt(i)!='-'){</span>
+<span class="cstat-no" title="statement not covered" >			i++;</span>
 		}
-		this.storeCode=this.str.substring(1,i);
-		this.storeNo=this.str.substring(i+1);
-		const obj1=new NumToWord(this.storeCode);
-		this.formedstr='+'+obj1.convert1()+'-';
-		const obj2=new NumToWord(this.storeNo);
-		this.formedstr+=obj2.convert1();
-		const obj=new ReplaceN(this.ref,this.formedstr,this.str);
-		obj.compute();
+<span class="cstat-no" title="statement not covered" >		this.storeCode=this.str.substring(1,i);</span>
+<span class="cstat-no" title="statement not covered" >		this.storeNo=this.str.substring(i+1);</span>
+		const obj1=<span class="cstat-no" title="statement not covered" >new NumToWord(this.storeCode);</span>
+<span class="cstat-no" title="statement not covered" >		this.formedstr='+'+obj1.convert1()+'-';</span>
+		const obj2=<span class="cstat-no" title="statement not covered" >new NumToWord(this.storeNo);</span>
+<span class="cstat-no" title="statement not covered" >		this.formedstr+=obj2.convert1();</span>
+		const obj=<span class="cstat-no" title="statement not covered" >new ReplaceN(this.ref,this.formedstr,this.str);</span>
+<span class="cstat-no" title="statement not covered" >		obj.compute();</span>
 	}
 	output(){
 		const obj1=new NumToWord(this.storeCode);
@@ -145,7 +169,7 @@ export default class PhoneNo{
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 21:22:01 GMT+0530 (IST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 23:01:27 GMT+0530 (IST)
 </div>
 </div>
 <script src="prettify.js"></script>

@@ -14,12 +14,12 @@ describe("testing decimal",function(){
         obj.storeNo='9051589470';
         expect(obj.output()).toBe('+nine one -nine zero five one five eight nine four seven zero ');
     });
-    it("testing",function(){
+    /*it("testing",function(){
         //expect(obj.extract()).toBe(undefined);
         //expect(obj.arrayForm()).toBe(undefined);
         obj2.ref='obj2';
         obj2.formedstr='+nine one -nine zero five one five eight nine four seven zero ';
         obj2.str='+91-9051589470';
         expect(obj.extract()).toBe(undefined);
-    });
+    });*/
 });
