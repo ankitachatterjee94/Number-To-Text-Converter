@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for time.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> time.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.82% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.82% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//segregating hour, minutes and seconds from a given time
+&nbsp;
+/**class to convert time to time in words
+ * this.str			:	stores the date
+ * this.array		:	stores the split string
+ * this.hr			:	stores hour
+ * this.min			:	stores minutes
+ * this.sec			:	stores seconds
+ * this.formedstr	:	stores the converted string
+ * this.ref			:	stores the reference to the identifier
+ */
+import NumToWord from './numToWord.js';
+import ReplaceN from './replace.js';
+export default class Time{
+	constructor(ref,str){
+		this.str=str;
+		this.hr='';
+		this.min='';
+		this.sec='';
+		this.array=[];
+		this.formedstr='';
+		this.ref=ref;
+	}
+<span class="fstat-no" title="function not covered" >	ar</span>rayForm(){
+<span class="cstat-no" title="statement not covered" >		this.array=this.str.split(/[:]/);</span>
+	}
+<span class="fstat-no" title="function not covered" >	ex</span>tract(){
+<span class="cstat-no" title="statement not covered" >		if(this.str.substring(this.str.length-1).match(/[a-zA-Z]/)){          </span>
+<span class="cstat-no" title="statement not covered" >			if(this.array.length==3){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1];</span>
+<span class="cstat-no" title="statement not covered" >				this.sec=this.array[2].substring(0,this.array[2].length-2);</span>
+			}
+			else <span class="cstat-no" title="statement not covered" >if(this.array.length==2){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1].substring(0,this.array[1].length-2);</span>
+			}
+			else{
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0].substring(0,this.array[0].length-2);</span>
+			}
+		}
+		else{
+<span class="cstat-no" title="statement not covered" >			if(this.array.length==3){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1];</span>
+<span class="cstat-no" title="statement not covered" >				this.sec=this.array[2];</span>
+			}
+			else <span class="cstat-no" title="statement not covered" >if(this.array.length==2){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1];</span>
+			}
+			else{
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+			}
+		}
+		const obj1=<span class="cstat-no" title="statement not covered" >new NumToWord(this.hr);</span>
+<span class="cstat-no" title="statement not covered" >		if(this.min!=''){</span>
+<span class="cstat-no" title="statement not covered" >			this.formedstr+=obj1.convert()+':';</span>
+			const obj2=<span class="cstat-no" title="statement not covered" >new NumToWord(this.min);</span>
+<span class="cstat-no" title="statement not covered" >			if(this.sec!=''){</span>
+<span class="cstat-no" title="statement not covered" >				this.formedstr+=obj2.convert()+':';</span>
+				const obj3=<span class="cstat-no" title="statement not covered" >new NumToWord(this.sec);</span>
+<span class="cstat-no" title="statement not covered" >				this.formedstr+=obj3.convert();</span>
+			}
+			else{
+<span class="cstat-no" title="statement not covered" >				this.formedstr+=obj2.convert();</span>
+			}
+		}
+		else{
+<span class="cstat-no" title="statement not covered" >			this.formedstr+=obj1.convert();</span>
+		}
+		const obj=<span class="cstat-no" title="statement not covered" >new ReplaceN(this.ref,this.formedstr,this.str);</span>
+<span class="cstat-no" title="statement not covered" >		obj.compute();</span>
+	}
+	output(){
+		const obj1=new NumToWord(this.hr);
+		this.formedstr+=obj1.convert()+':';
+		const obj2=new NumToWord(this.min);
+		this.formedstr+=obj2.convert()+':';
+		const obj3=new NumToWord(this.sec);
+		this.formedstr+=obj3.convert();
+		return this.formedstr;
+	}
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 23:01:27 GMT+0530 (IST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
