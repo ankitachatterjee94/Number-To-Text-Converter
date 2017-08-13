@@ -1,18 +1,34 @@
 //segregating phone no, time and date from a string with special characters
+
 import Date from './date.js';
 import Time from './time.js';
 import PhoneNo from './phoneNo.js';
 import DeciFrac from './deciFrac.js';
+/**class that segregates time, date, phone no and decimal fraction
+ * @class
+ * this.str				:	stores the string
+ * this.storeDate		:	stores the date
+ * this.storeTime		:	stores time
+ * this.storePhoneNo	:	stores phone no
+ * this.decfra			:	stores decimal and fraction
+ * this.ref				:	stores the reference to the identifier
+ */
 export default class SpecialCharNum{
 	constructor(ref,str){
+		/**constructor of specialcharnum class
+		 * @constructor
+		 * @param {object|string}
+		 */
 		this.str=str;
-		this.store='';
 		this.storeDate='';
 		this.storeTime='';
 		this.storePhoneNo='';
 		this.decfra='';
 		this.ref=ref;
 	}
+	/**function to check character in a number
+	 * @function
+	 */
 	check(){
 		var i;
 		if(this.str.charAt(0)=='+'){

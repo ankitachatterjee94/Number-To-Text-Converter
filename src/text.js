@@ -1,5 +1,8 @@
 //getting user input
 import Identifier from './identifier.js';
+/**function to input number
+ * @function
+ */
 
 let inputNum = () => {
 	var i=document.getElementById('input1').value;

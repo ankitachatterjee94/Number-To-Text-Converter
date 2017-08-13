@@ -1,11 +1,25 @@
 //Identifying numbers in a string
+
 import Decider from './decider.js';
+/**class that identifies numbers and stores them separately
+ * @class
+ * this.str			:	stores the string
+ * this.array		:	stores the split string
+ * this.store		:	stores the numbers
+ */
 export default class Identifier{
+	/**constructor of identifier class
+	 * @constructor
+	 * @param {object|string}
+	 */
 	constructor(str){
 		this.str=str;
 		this.array=str.split(' ');
 		this.store=[];
 	}
+	/**function to identify number
+	 * @function
+	 */
 	identify(){
 		var i,j,ref;
 		for(i=0;i<this.array.length;i++){

@@ -1,10 +1,24 @@
 //extracting time, decimal, ordinal and prefixsufix number from a given string with a sufix prefix
+
 import Time from './time.js';
 import Ordinal from './ordinal.js';
 import Decimal from './decimal';
 import SufixPrefix from './sufixPrefix.js';
+/**class that segregates ordinal, decimal and sufix prefix numbers
+ * @class
+ * this.str				:	stores the string
+ * this.storeSuPre		:	stores the sufix prefix number
+ * this.storeOrdinal	:	stores the ordinal number
+ * this.storeTime		:	stores the time
+ * this.storeDecimal	:	stores the decimal
+ * this.ref				:	stores the reference to the identifier
+ */
 export default class PrePostfix{
 	constructor(ref,str){
+		/**constructor of prepostfix class
+		 * @constructor
+		 * @param {object|string}
+		 */
 		this.str=str;
 		this.storeSufPre='';
 		this.storeOrdinal='';
@@ -12,6 +26,9 @@ export default class PrePostfix{
 		this.storeDecimal='';
 		this.ref=ref;
 	}
+	/**function to convert number
+	 * @function
+	 */
 	extract(){
 		var s1=this.str.substring(this.str.length-2);
 		if(s1=='st' || s1=='nd' || s1=='rd' || s1=='th'){

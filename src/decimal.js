@@ -1,7 +1,20 @@
 //segregating whole number and fractional part of a decimal number
+
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
+/**class that extracts whole number and fraction
+ * @class
+ * this.str				:	stores the string
+ * this.storeWholeNum	:	stores the whole number
+ * this.storeFracNum	:	stores the fractional number
+ * this.formedstr		:	stores the converted string
+ * this.ref				:	stores the reference to the identifier
+ */
 export default class Decimal{
+	/**constructor of decimal class
+	 * @constructor
+	 * @param {object|string}
+	 */
 	constructor(ref,str){
 		this.str=str;
 		this.storeWholeNum='';
@@ -9,6 +22,9 @@ export default class Decimal{
 		this.formedstr='';
 		this.ref=ref;
 	}
+	/**function to convert number
+	 * @function
+	 */
 	extract(){
 		var i=0;
 		while(this.str.charAt(i)!='.'){
@@ -29,6 +45,9 @@ export default class Decimal{
 		const obj3=new ReplaceN(this.ref,this.formedstr,this.str);
 		obj3.compute();
 	}
+	/**function to return the converted number
+	 * @function
+	 */
 	output(){
 		const obj1=new NumToWord(this.storeWholeNum);
 		this.formedstr+=obj1.convert()+'.';
