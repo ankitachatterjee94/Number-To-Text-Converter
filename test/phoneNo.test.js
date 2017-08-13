@@ -1,6 +1,6 @@
-import PhoneNo from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/phoneNo.js';
-import NumToWord from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/numToWord.js';
-import ReplaceN from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/replace.js';
+import PhoneNo from '../src/phoneNo.js';
+import NumToWord from '../src/numToWord.js';
+import ReplaceN from '../src/replace.js';
 const obj=new PhoneNo('','+91-9051589470');
 const obj1=new NumToWord(obj,'+91-9051589470');
 const obj2=new ReplaceN(obj,'');

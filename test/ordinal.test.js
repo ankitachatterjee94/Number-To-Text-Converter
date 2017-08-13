@@ -1,6 +1,6 @@
-import Ordinal from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/ordinal.js';
-import NumToWord from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/numToWord.js';
-import ReplaceN from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/replace.js';
+import Ordinal from '../src/ordinal.js';
+import NumToWord from '../src/numToWord.js';
+import ReplaceN from '../src/replace.js';
 const obj=new Ordinal('','24th');
 const obj1=new NumToWord(obj,'24th');
 const obj2=new ReplaceN(obj,'twenty fourth');

@@ -1,6 +1,6 @@
-import SufixPrefix from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/sufixPrefix.js';
-import NumToWord from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/numToWord.js';
-import ReplaceN from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/replace.js';
+import SufixPrefix from '../src/sufixPrefix.js';
+import NumToWord from '../src/numToWord.js';
+import ReplaceN from '../src/replace.js';
 const obj=new SufixPrefix('','2kg');
 const obj1=new NumToWord(obj,'2kg');
 const obj2=new ReplaceN(obj,'twokg','2kg');

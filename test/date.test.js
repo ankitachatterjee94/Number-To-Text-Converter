@@ -1,6 +1,6 @@
-import Date from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/date.js';
-import NumToWord from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/numToWord.js';
-import ReplaceN from '/home/ankitachatterjee/Desktop/Number-To-Text-Converter/src/replace.js';
+import Date from '../src/date.js';
+import NumToWord from '../src/numToWord.js';
+import ReplaceN from '../src/replace.js';
 const obj=new Date('','25-08-1994');
 const obj1=new NumToWord(obj,'25-08-1994');
 const obj2=new ReplaceN(obj,'twenty five-eight-one thousand nine hundred ninety four');
