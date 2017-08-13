@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">31.11% </span>
+        <span class="strong">31.82% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>14/45</span>
+        <span class='fraction'>14/44</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">31.11% </span>
+        <span class="strong">31.82% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>14/45</span>
+        <span class='fraction'>14/44</span>
       </div>
     </div>
   </div>
@@ -116,8 +116,7 @@
 71
 72
 73
-74
-75</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+74</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,7 +133,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -195,83 +193,82 @@
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
 export default class Time{
-    constructor(ref,str){
-        this.str=str;
-        this.hr='';
-        this.min='';
-        this.sec='';
-        this.array=[];
-        this.formedstr='';
-        this.ref=ref;
-    }
-<span class="fstat-no" title="function not covered" >    ar</span>rayForm(){
-<span class="cstat-no" title="statement not covered" >        this.array=this.str.split(/[:]/);</span>
-    }
-<span class="fstat-no" title="function not covered" >    ex</span>tract(){
-<span class="cstat-no" title="statement not covered" >        if(this.str.substring(this.str.length-1).match(/[a-zA-Z]/)){</span>
-            let i=<span class="cstat-no" title="statement not covered" >0;            </span>
-<span class="cstat-no" title="statement not covered" >            if(this.array.length==3){</span>
-<span class="cstat-no" title="statement not covered" >                this.hr=this.array[0];</span>
-<span class="cstat-no" title="statement not covered" >                this.min=this.array[1];</span>
-<span class="cstat-no" title="statement not covered" >                this.sec=this.array[2].substring(0,this.array[2].length-2);</span>
-            }
-            else <span class="cstat-no" title="statement not covered" >if(this.array.length==2){</span>
-<span class="cstat-no" title="statement not covered" >                this.hr=this.array[0];</span>
-<span class="cstat-no" title="statement not covered" >                this.min=this.array[1].substring(0,this.array[1].length-2);</span>
-            }
-            else{
-<span class="cstat-no" title="statement not covered" >                this.hr=this.array[0].substring(0,this.array[0].length-2);</span>
-            }
-        }
-        else{
-<span class="cstat-no" title="statement not covered" >            if(this.array.length==3){</span>
-<span class="cstat-no" title="statement not covered" >                this.hr=this.array[0];</span>
-<span class="cstat-no" title="statement not covered" >                this.min=this.array[1];</span>
-<span class="cstat-no" title="statement not covered" >                this.sec=this.array[2];</span>
-            }
-            else <span class="cstat-no" title="statement not covered" >if(this.array.length==2){</span>
-<span class="cstat-no" title="statement not covered" >                this.hr=this.array[0];</span>
-<span class="cstat-no" title="statement not covered" >                this.min=this.array[1];</span>
-            }
-            else{
-<span class="cstat-no" title="statement not covered" >                this.hr=this.array[0];</span>
-            }
-        }
-        const obj1=<span class="cstat-no" title="statement not covered" >new NumToWord(this.hr);</span>
-<span class="cstat-no" title="statement not covered" >        if(this.min!=''){</span>
-<span class="cstat-no" title="statement not covered" >            this.formedstr+=obj1.convert()+':';</span>
-            const obj2=<span class="cstat-no" title="statement not covered" >new NumToWord(this.min);</span>
-<span class="cstat-no" title="statement not covered" >            if(this.sec!=''){</span>
-<span class="cstat-no" title="statement not covered" >                this.formedstr+=obj2.convert()+':';</span>
-                const obj3=<span class="cstat-no" title="statement not covered" >new NumToWord(this.sec);</span>
-<span class="cstat-no" title="statement not covered" >                this.formedstr+=obj3.convert();</span>
-            }
-            else{
-<span class="cstat-no" title="statement not covered" >                this.formedstr+=obj2.convert()</span>
-            }
-        }
-        else{
-<span class="cstat-no" title="statement not covered" >            this.formedstr+=obj1.convert()</span>
-        }
-        const obj=<span class="cstat-no" title="statement not covered" >new ReplaceN(this.ref,this.formedstr,this.str);</span>
-<span class="cstat-no" title="statement not covered" >        obj.compute();</span>
-    }
-    output(){
-        const obj1=new NumToWord(this.hr);
-        this.formedstr+=obj1.convert()+':';
-        const obj2=new NumToWord(this.min);
-        this.formedstr+=obj2.convert()+':';
-        const obj3=new NumToWord(this.sec);
-        this.formedstr+=obj3.convert();
-        return this.formedstr;
-    }
+	constructor(ref,str){
+		this.str=str;
+		this.hr='';
+		this.min='';
+		this.sec='';
+		this.array=[];
+		this.formedstr='';
+		this.ref=ref;
+	}
+<span class="fstat-no" title="function not covered" >	ar</span>rayForm(){
+<span class="cstat-no" title="statement not covered" >		this.array=this.str.split(/[:]/);</span>
+	}
+<span class="fstat-no" title="function not covered" >	ex</span>tract(){
+<span class="cstat-no" title="statement not covered" >		if(this.str.substring(this.str.length-1).match(/[a-zA-Z]/)){          </span>
+<span class="cstat-no" title="statement not covered" >			if(this.array.length==3){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1];</span>
+<span class="cstat-no" title="statement not covered" >				this.sec=this.array[2].substring(0,this.array[2].length-2);</span>
+			}
+			else <span class="cstat-no" title="statement not covered" >if(this.array.length==2){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1].substring(0,this.array[1].length-2);</span>
+			}
+			else{
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0].substring(0,this.array[0].length-2);</span>
+			}
+		}
+		else{
+<span class="cstat-no" title="statement not covered" >			if(this.array.length==3){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1];</span>
+<span class="cstat-no" title="statement not covered" >				this.sec=this.array[2];</span>
+			}
+			else <span class="cstat-no" title="statement not covered" >if(this.array.length==2){</span>
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >				this.min=this.array[1];</span>
+			}
+			else{
+<span class="cstat-no" title="statement not covered" >				this.hr=this.array[0];</span>
+			}
+		}
+		const obj1=<span class="cstat-no" title="statement not covered" >new NumToWord(this.hr);</span>
+<span class="cstat-no" title="statement not covered" >		if(this.min!=''){</span>
+<span class="cstat-no" title="statement not covered" >			this.formedstr+=obj1.convert()+':';</span>
+			const obj2=<span class="cstat-no" title="statement not covered" >new NumToWord(this.min);</span>
+<span class="cstat-no" title="statement not covered" >			if(this.sec!=''){</span>
+<span class="cstat-no" title="statement not covered" >				this.formedstr+=obj2.convert()+':';</span>
+				const obj3=<span class="cstat-no" title="statement not covered" >new NumToWord(this.sec);</span>
+<span class="cstat-no" title="statement not covered" >				this.formedstr+=obj3.convert();</span>
+			}
+			else{
+<span class="cstat-no" title="statement not covered" >				this.formedstr+=obj2.convert();</span>
+			}
+		}
+		else{
+<span class="cstat-no" title="statement not covered" >			this.formedstr+=obj1.convert();</span>
+		}
+		const obj=<span class="cstat-no" title="statement not covered" >new ReplaceN(this.ref,this.formedstr,this.str);</span>
+<span class="cstat-no" title="statement not covered" >		obj.compute();</span>
+	}
+	output(){
+		const obj1=new NumToWord(this.hr);
+		this.formedstr+=obj1.convert()+':';
+		const obj2=new NumToWord(this.min);
+		this.formedstr+=obj2.convert()+':';
+		const obj3=new NumToWord(this.sec);
+		this.formedstr+=obj3.convert();
+		return this.formedstr;
+	}
 }</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 13:55:52 GMT+0530 (IST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 21:22:01 GMT+0530 (IST)
 </div>
 </div>
 <script src="prettify.js"></script>

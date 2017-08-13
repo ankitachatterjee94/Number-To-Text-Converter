@@ -137,54 +137,54 @@
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
 export default class Date{
-    constructor(ref,str){
-        this.str=str;
-        this.array=[];
-        this.year='';
-        this.month='';
-        this.day='';
-        this.formedstr='';
-        this.ref=ref;
-    }
-<span class="fstat-no" title="function not covered" >    ar</span>rayForm(){
-<span class="cstat-no" title="statement not covered" >        this.array=this.str.split(/[-/.]/);</span>
-    }
-<span class="fstat-no" title="function not covered" >    ex</span>tract(){
-<span class="cstat-no" title="statement not covered" >        if(this.array[0].length==4){</span>
-<span class="cstat-no" title="statement not covered" >            this.year=this.array[0];</span>
-<span class="cstat-no" title="statement not covered" >            this.month=this.array[1];</span>
-<span class="cstat-no" title="statement not covered" >            this.day=this.array[2];</span>
-        }
-        else <span class="cstat-no" title="statement not covered" >if(this.array[2].length==4){</span>
-<span class="cstat-no" title="statement not covered" >            this.year=this.array[2];</span>
-<span class="cstat-no" title="statement not covered" >            this.month=this.array[1];</span>
-<span class="cstat-no" title="statement not covered" >            this.day=this.array[0];</span>
-        }
-        const obj=<span class="cstat-no" title="statement not covered" >new NumToWord(this.year);</span>
-<span class="cstat-no" title="statement not covered" >        this.formedstr+=obj.convert()+'-';</span>
-        const obj1=<span class="cstat-no" title="statement not covered" >new NumToWord(this.month);</span>
-<span class="cstat-no" title="statement not covered" >        this.formedstr+=obj1.convert()+'-';</span>
-        const obj2=<span class="cstat-no" title="statement not covered" >new NumToWord(this.day);</span>
-<span class="cstat-no" title="statement not covered" >        this.formedstr+=obj2.convert();</span>
-        const obj3=<span class="cstat-no" title="statement not covered" >new ReplaceN(this.ref,this.formedstr,this.str);</span>
-<span class="cstat-no" title="statement not covered" >        obj3.compute();</span>
-    }
-    output(){
-        const obj=new NumToWord(this.year);
-        this.formedstr+=obj.convert()+'-';
-        const obj1=new NumToWord(this.month);
-        this.formedstr+=obj1.convert()+'-';
-        const obj2=new NumToWord(this.day);
-        this.formedstr+=obj2.convert();
-        return this.formedstr;
-    }
+	constructor(ref,str){
+		this.str=str;
+		this.array=[];
+		this.year='';
+		this.month='';
+		this.day='';
+		this.formedstr='';
+		this.ref=ref;
+	}
+<span class="fstat-no" title="function not covered" >	ar</span>rayForm(){
+<span class="cstat-no" title="statement not covered" >		this.array=this.str.split(/[-/.]/);</span>
+	}
+<span class="fstat-no" title="function not covered" >	ex</span>tract(){
+<span class="cstat-no" title="statement not covered" >		if(this.array[0].length==4){</span>
+<span class="cstat-no" title="statement not covered" >			this.year=this.array[0];</span>
+<span class="cstat-no" title="statement not covered" >			this.month=this.array[1];</span>
+<span class="cstat-no" title="statement not covered" >			this.day=this.array[2];</span>
+		}
+		else <span class="cstat-no" title="statement not covered" >if(this.array[2].length==4){</span>
+<span class="cstat-no" title="statement not covered" >			this.year=this.array[2];</span>
+<span class="cstat-no" title="statement not covered" >			this.month=this.array[1];</span>
+<span class="cstat-no" title="statement not covered" >			this.day=this.array[0];</span>
+		}
+		const obj=<span class="cstat-no" title="statement not covered" >new NumToWord(this.year);</span>
+<span class="cstat-no" title="statement not covered" >		this.formedstr+=obj.convert()+'-';</span>
+		const obj1=<span class="cstat-no" title="statement not covered" >new NumToWord(this.month);</span>
+<span class="cstat-no" title="statement not covered" >		this.formedstr+=obj1.convert()+'-';</span>
+		const obj2=<span class="cstat-no" title="statement not covered" >new NumToWord(this.day);</span>
+<span class="cstat-no" title="statement not covered" >		this.formedstr+=obj2.convert();</span>
+		const obj3=<span class="cstat-no" title="statement not covered" >new ReplaceN(this.ref,this.formedstr,this.str);</span>
+<span class="cstat-no" title="statement not covered" >		obj3.compute();</span>
+	}
+	output(){
+		const obj=new NumToWord(this.year);
+		this.formedstr+=obj.convert()+'-';
+		const obj1=new NumToWord(this.month);
+		this.formedstr+=obj1.convert()+'-';
+		const obj2=new NumToWord(this.day);
+		this.formedstr+=obj2.convert();
+		return this.formedstr;
+	}
 }</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 13:55:52 GMT+0530 (IST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 21:22:01 GMT+0530 (IST)
 </div>
 </div>
 <script src="prettify.js"></script>

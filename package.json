@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/babel-node ./src/text.js",
     "build": "webpack --config ./webpack.conf.js ",
-    "test": "jest --coverage"
+    "test": "./node_modules/.bin/eslint ./src/*.js && jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
+    "eslint": "^4.4.1",
     "jasmine-core": "^2.7.0",
     "jest": "^20.0.4",
     "karma": "^1.7.0",

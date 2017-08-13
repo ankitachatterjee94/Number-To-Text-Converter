@@ -167,69 +167,69 @@
 import NumToWord from './numToWord.js';
 import ReplaceN from './replace.js';
 export default class Ordinal{
-    constructor(ref,str){
-        this.str=str;
-        this.storeUnit='';
-        this.storeOrd='';
-        this.formedstr='';
-        this.ref=ref;
-    }
-    extract(){
-        var tens=['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
-        var tensord=['twentieth','thirtieth','fortieth','fiftieth','sixtieth','seventieth','eightieth','ninetieth'];
-        this.storeUnit=this.str.substring(0,this.str.length-2);
-        this.storeOrd=this.str.substring(this.str.length-2);
-        const obj=new NumToWord(this.storeUnit);
-        this.formedstr+=obj.convert();
-        let arr=this.formedstr.split(' ');
-        <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='three'){
-<span class="cstat-no" title="statement not covered" >            arr[arr.length]='third';</span>
-        }
-        else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='one'){
-<span class="cstat-no" title="statement not covered" >            arr[arr.length-1]='first';</span>
-<span class="cstat-no" title="statement not covered" >            this.formedstr=arr.join(' ');</span>
-        }
-        else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='two'){
-<span class="cstat-no" title="statement not covered" >            arr[arr.length-1]='second';</span>
-<span class="cstat-no" title="statement not covered" >            this.formedstr=arr.join(' ');</span>
-        }
-        else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='eight'){
-<span class="cstat-no" title="statement not covered" >            arr[arr.length-1]='eighth';</span>
-<span class="cstat-no" title="statement not covered" >            this.formedstr=arr.join(' ');</span>
-        }
-        else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='five'){
-<span class="cstat-no" title="statement not covered" >            arr[arr.length-1]='fifth';</span>
-<span class="cstat-no" title="statement not covered" >            this.formedstr=arr.join(' ');</span>
-        }
-        else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='nine'){
-<span class="cstat-no" title="statement not covered" >            arr[arr.length-1]='ninth';</span>
-<span class="cstat-no" title="statement not covered" >            this.formedstr=arr.join(' ');</span>
-        }
-        else <span class="missing-if-branch" title="if path not taken" >I</span>if(tens.includes(arr[arr.length-1])){
-            let i=<span class="cstat-no" title="statement not covered" >0;</span>
-<span class="cstat-no" title="statement not covered" >            while(tens[i]!=arr[arr.length-1]){</span>
-<span class="cstat-no" title="statement not covered" >                i++;</span>
-            }
-<span class="cstat-no" title="statement not covered" >            arr[arr.length-1]=tensord[i];</span>
-        }
-        else{
-            this.formedstr+=this.storeOrd;
-        }
-        const obj3=new ReplaceN(this.ref,this.formedstr,this.str);
-        obj3.compute();
-    }
-    output(){
-        const obj1=new NumToWord(this.storeUnit);
-        this.formedstr+=obj1.convert()+this.storeOrd;
-        return this.formedstr;
-    }
+	constructor(ref,str){
+		this.str=str;
+		this.storeUnit='';
+		this.storeOrd='';
+		this.formedstr='';
+		this.ref=ref;
+	}
+	extract(){
+		var tens=['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+		var tensord=['twentieth','thirtieth','fortieth','fiftieth','sixtieth','seventieth','eightieth','ninetieth'];
+		this.storeUnit=this.str.substring(0,this.str.length-2);
+		this.storeOrd=this.str.substring(this.str.length-2);
+		const obj=new NumToWord(this.storeUnit);
+		this.formedstr+=obj.convert();
+		let arr=this.formedstr.split(' ');
+		<span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='three'){
+<span class="cstat-no" title="statement not covered" >			arr[arr.length]='third';</span>
+		}
+		else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='one'){
+<span class="cstat-no" title="statement not covered" >			arr[arr.length-1]='first';</span>
+<span class="cstat-no" title="statement not covered" >			this.formedstr=arr.join(' ');</span>
+		}
+		else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='two'){
+<span class="cstat-no" title="statement not covered" >			arr[arr.length-1]='second';</span>
+<span class="cstat-no" title="statement not covered" >			this.formedstr=arr.join(' ');</span>
+		}
+		else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='eight'){
+<span class="cstat-no" title="statement not covered" >			arr[arr.length-1]='eighth';</span>
+<span class="cstat-no" title="statement not covered" >			this.formedstr=arr.join(' ');</span>
+		}
+		else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='five'){
+<span class="cstat-no" title="statement not covered" >			arr[arr.length-1]='fifth';</span>
+<span class="cstat-no" title="statement not covered" >			this.formedstr=arr.join(' ');</span>
+		}
+		else <span class="missing-if-branch" title="if path not taken" >I</span>if(arr[arr.length-1]=='nine'){
+<span class="cstat-no" title="statement not covered" >			arr[arr.length-1]='ninth';</span>
+<span class="cstat-no" title="statement not covered" >			this.formedstr=arr.join(' ');</span>
+		}
+		else <span class="missing-if-branch" title="if path not taken" >I</span>if(tens.includes(arr[arr.length-1])){
+			let i=<span class="cstat-no" title="statement not covered" >0;</span>
+<span class="cstat-no" title="statement not covered" >			while(tens[i]!=arr[arr.length-1]){</span>
+<span class="cstat-no" title="statement not covered" >				i++;</span>
+			}
+<span class="cstat-no" title="statement not covered" >			arr[arr.length-1]=tensord[i];</span>
+		}
+		else{
+			this.formedstr+=this.storeOrd;
+		}
+		const obj3=new ReplaceN(this.ref,this.formedstr,this.str);
+		obj3.compute();
+	}
+	output(){
+		const obj1=new NumToWord(this.storeUnit);
+		this.formedstr+=obj1.convert()+this.storeOrd;
+		return this.formedstr;
+	}
 }</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 13:55:52 GMT+0530 (IST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 21:22:01 GMT+0530 (IST)
 </div>
 </div>
 <script src="prettify.js"></script>
